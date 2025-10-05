@@ -86,9 +86,9 @@ const Header = () => {
           <NavItems />
         </div>
 
-        {/* mobile devise nav items */}
+        {/* mobile device nav items */}
         <div
-          className={`fixed top-0 left-0 w-full h-screen flex lg:hidden items-center justify-center bg-green-100 opacity-80 transition-transform duration-200 ${
+          className={`fixed z-50 top-0 left-0 w-full h-screen flex lg:hidden items-center justify-center bg-green-200 opacity-80 transition-transform duration-200 ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
