@@ -3,7 +3,7 @@ import bookHero from "./../../assets/book_hero.png";
 
 const Banner = () => {
   return (
-    <div className="px-28 py-20 bg-neutral-900/5 rounded-3xl flex items-center justify-between gap-8">
+    <div className="px-28 py-20 bg-neutral-900/5 rounded-3xl hidden items-center justify-between gap-8">
       {/* left content */}
       <div className="w-1/2">
         <div className="mb-12">
