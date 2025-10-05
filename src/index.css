@@ -1,8 +1,20 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
 
 /* theme customization */
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
+/* base styles */
 @layer base {
   ::selection {
     @apply bg-teal-100/80 text-teal-600;
+  }
+
+  body {
+    @apply w-full relative overflow-x-hidden font-inter;
   }
 }
