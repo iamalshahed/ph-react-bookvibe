@@ -32,4 +32,16 @@
   .btn_header {
     @apply px-7 py-4 rounded-lg text-white text-lg font-semibold;
   }
+
+  .tbl_cntnt {
+    @apply text-neutral-900/70 text-base font-normal;
+  }
+
+  .tbl_rght_cnt {
+    @apply text-neutral-900 text-base font-semibold;
+  }
+
+  .read_wishlisht_btn {
+    @apply px-7 py-4 rounded-lg text-lg font-semibold;
+  }
 }

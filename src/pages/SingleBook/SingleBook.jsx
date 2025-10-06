@@ -14,7 +14,7 @@ const SingleBook = ({ bookItem }) => {
         {/* image */}
         <div className="bg-zinc-100 rounded-2xl py-8 px-4 mb-6">
           <img
-            className="w-32 h-40 object-contain mx-auto"
+            className="h-40 object-contain mx-auto"
             src={image}
             alt="Book"
           />
