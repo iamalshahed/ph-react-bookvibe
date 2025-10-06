@@ -21,7 +21,7 @@ const BookDetails = () => {
   } = targetedBook;
 
   return (
-    <div className="lg:grid lg:grid-cols-12 lg:gap-12 mt-2 space-y-10 lg:space-y-0">
+    <div className="lg:grid lg:grid-cols-12 lg:gap-12 mt-2 space-y-10 lg:space-y-0 pb-10">
       {/* left */}
       <div className="lg:bg-neutral-900/5 rounded-2xl lg:p-16 lg:col-span-6">
         <img
@@ -35,7 +35,7 @@ const BookDetails = () => {
       <div className="lg:col-span-6">
         {/* head and author */}
         <div className="space-y-4">
-          <h1 className="text-neutral-900 text-4xl font-bold">{bookName}</h1>
+          <h1 className="text-neutral-900 text-3xl sm:text-4xl font-bold">{bookName}</h1>
           <p className="text-neutral-900/80 text-xl font-medium">
             By : {author}
           </p>
