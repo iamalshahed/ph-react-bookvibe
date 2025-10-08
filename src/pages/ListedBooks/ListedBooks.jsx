@@ -47,7 +47,7 @@ const ListedBooks = () => {
           id="sortBy"
           style={{ WebkitAppearance: "none", cursor: "pointer" }}
         >
-          <option selected hidden value="sortBySelected">
+          <option defaultValue="sortBySelected" hidden>
             Sort by : {sort ? sort : ""}
           </option>
           <option value="pages" onClick={() => handleSort("pages")}>

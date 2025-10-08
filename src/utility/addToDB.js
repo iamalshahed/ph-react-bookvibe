@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 /**
  * first e get krsi je jodi localstr e kono data thake tahole sei dataguloke age dhore ano
  */
@@ -44,7 +46,7 @@ const addToStoredDB = (id) => {
     /**
      * jodi id theke thake tahole alert dekhabe
      */
-    alert("vayee..🙂 ei id alrady exist🙂🙂🙂");
+    toast.error("ee vayee.. eida alrady exist 🙂🙂");
   } else {
     /**
      * ar jodi id na thake tahole age storedBookData var e amr id ta push krbe
