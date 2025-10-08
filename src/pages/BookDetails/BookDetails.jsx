@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { addToStoredDB } from "../../utility/addToDB";
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -20,6 +21,13 @@ const BookDetails = () => {
     rating,
   } = targetedBook;
 
+  /**
+   * mark as read btn functionality
+   */
+  const handleRead = (id) => {
+    addToStoredDB(id);
+  };
+
   return (
     <div className="lg:grid lg:grid-cols-12 lg:gap-12 mt-2 space-y-10 lg:space-y-0 pb-10">
       {/* left */}
@@ -35,7 +43,9 @@ const BookDetails = () => {
       <div className="lg:col-span-6">
         {/* head and author */}
         <div className="space-y-4">
-          <h1 className="text-neutral-900 text-3xl sm:text-4xl font-bold">{bookName}</h1>
+          <h1 className="text-neutral-900 text-3xl sm:text-4xl font-bold">
+            {bookName}
+          </h1>
           <p className="text-neutral-900/80 text-xl font-medium">
             By : {author}
           </p>
@@ -125,7 +135,10 @@ const BookDetails = () => {
         {/* bottom btns */}
         <div className="mt-8 flex items-center gap-4">
           {/* read */}
-          <button className="read_wishlisht_btn text-neutral-900 border border-neutral-900/30 hover:bg-gray-200">
+          <button
+            onClick={() => handleRead(id)}
+            className="read_wishlisht_btn text-neutral-900 border border-neutral-900/30 hover:bg-gray-200"
+          >
             Read
           </button>
 
