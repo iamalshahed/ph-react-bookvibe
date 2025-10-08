@@ -66,4 +66,4 @@ const addToStoredDB = (id) => {
 /**
  * export addToStoredDB
  */
-export { addToStoredDB };
+export { addToStoredDB, getStoredDB };
