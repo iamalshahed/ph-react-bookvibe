@@ -11,6 +11,7 @@ const ListedBooks = () => {
    */
   const allData = useLoaderData();
   const [readList, setReadList] = useState([]);
+  const [sort, setSort] = useState("");
 
   useEffect(() => {
     const sotoredBookData = getStoredDB();
@@ -23,8 +24,40 @@ const ListedBooks = () => {
     setReadList(myReadList);
   }, [allData]);
 
+  const handleSort = (sortType) => {
+    setSort(sortType);
+
+    if (sortType === "pages") {
+      const sortedByPages = [...readList].sort(
+        (a, b) => a.totalPages - b.totalPages
+      );
+      setReadList(sortedByPages);
+    }
+    if (sortType === "ratings") {
+      const sortByRatings = [...readList].sort((a, b) => a.rating - b.rating);
+      setSort(sortByRatings);
+    }
+  };
+
   return (
     <div>
+      <div className="mb-10">
+        <select
+          name="sortBy"
+          id="sortBy"
+          style={{ WebkitAppearance: "none", cursor: "pointer" }}
+        >
+          <option selected hidden value="sortBySelected">
+            Sort by : {sort ? sort : ""}
+          </option>
+          <option value="pages" onClick={() => handleSort("pages")}>
+            Pages
+          </option>
+          <option value="ratings" onClick={() => handleSort("ratings")}>
+            Ratings
+          </option>
+        </select>
+      </div>
       <Tabs>
         <TabList>
           <Tab>Read Books</Tab>
